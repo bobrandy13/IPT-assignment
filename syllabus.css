@@ -1,0 +1,26 @@
+.syllabus_container {
+  padding: 20px;
+}
+
+.li-wrapper {
+  background-color: white;
+  display: block;
+  padding: 100px;
+
+  margin: 25px;
+
+  border-radius: 100px;
+}
+
+.li-wrapper:hover {
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}

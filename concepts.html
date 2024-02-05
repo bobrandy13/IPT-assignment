@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Concepts</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="concepts.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div class="container">
+      <div class="navbar">
+        Software Design and Development
+
+        <div class="links">
+          <a id="syllabus" href="syllabus.html">Syllabus</a>
+          <a id="assignments" href="assignments.html">Assignments</a>
+          <a id="home" href="index.html">Home</a>
+        </div>
+      </div>
+    </div>
+    <div class="concepts-wrapper">
+      Concepts
+      <ul>
+        <li>
+          <h1>Classes</h1>
+          <ul>
+            <li>
+              <h2>What is a class?</h2>
+
+              <h3>
+                Imagine you are creating a school. You have lots of students.
+                How would you go around coding this?
+              </h3>
+              <h3>The "blueprint" for the students (Classes)</h3>
+              <h4>
+                This is the class itself. Each student that enr0ls at your
+                schoo, should have a student id, name, age, height, class...
+                THey may also have what's known as methods. These are the
+                functions thatthey do. For example, every student should be able
+                to talk, study, walk, run...
+              </h4>
+              <h3>The actual students(Objects)</h3>
+            </li>
+            <li>
+              Class Example
+              <pre>
+                    <code>
+                        class Student:
+                            def __init__(self, name, age):
+                                self.name = name
+                                self.age = age
+
+                            def study(self):
+                                print("Studying hard....!")
+                    </code>
+                </pre>
+            </li>
+            <h4>
+              In the above code, the class Student has two attributes, age and
+              name, and one method, study.
+
+              <br />The name and age are like variables, and the bark is a
+              function. A function is like the button below. <br />
+              <h5>
+                If you click it, it will call upon something to be run. Like
+                calling your dog studying
+              </h5>
+              <div style="display: flex; justify-content: center">
+                <button
+                  id="js-test"
+                  style="
+                    padding: 20px;
+                    width: 200px;
+                    height: 100px;
+                    background-color: blue;
+                    color: white;
+                    font-size: 30px;
+                    font-weight: bold;
+                    border-radius: 10px;
+                  "
+                >
+                  Click me
+                </button>
+              </div>
+            </h4>
+          </ul>
+        </li>
+        <li>
+          <h1>Objects</h1>
+          <h2>what is an object????</h2>
+
+          <p>
+            An object is essentially a thing that has different characteristics.
+            For example, humans could be an object. They have different
+            attributes such as name, height, weight, shape. They can also have
+            functoins as part of the object. For example, humans can walk, talk,
+            run. Its more of a way to bundle them together.
+          </p>
+          <h3>Here is an example</h3>
+          <pre>
+            <code>
+                class Human {
+                    constructor(name, age) {
+                        this.name = name;
+                        this.age = age;
+                    }
+
+                    string talk() {
+                        console.log("Yapping!");
+                    }
+                }
+
+                const myFriend = new Human("Avi Gupta", 3);
+                myDog.talk();
+            </code>
+          </pre>
+          <h3>
+            Here in the above example, the myFriend is an object. It is
+            different from the class itself as that is the code itself that
+            defines the Human. For example, class HUman is the class, where as
+            myFriend is the object.
+          </h3>
+        </li>
+        <li><h1>Attirubtes</h1></li>
+        <h2>Different objects can have different attributes</h2>
+
+        <pre>
+            <code>
+                class Human {
+                    constructor(name: string, age: number) {
+                        this.name = name; <-- This is an attribute
+                        this.age = age; <-- so is this one
+                    }
+                }
+                </code> </pre>
+
+        <p>
+          For example, a dog can have a name, age, breed, and color. A human can
+          have a name, age, height, weight, and hair color. These are all
+          different attributes that are unique to the object.
+        </p>
+
+        <li>
+          <h1>Methods/Operations</h1>
+          <pre>
+            <code>
+                class Human {
+                    constructor(name: string, age: number) {
+                        this.name = name;
+                        this.age = age;
+                    }
+                    // this below is a method. It is a function that is part of the object that does something
+                    talk() { 
+                        console.log(`${this.name} is yapping!`);`
+                    }
+                }
+
+                const myBestFriend = new Human("Avi Gupta", 30000);
+                myBestFriend.talk(); <-- Output : "Avi Gupta is yapping!"
+            </code>
+        </pre>
+        </li>
+        <li>
+          <h1>Variables and Control Structures</h1>
+          Variables are like storage containers. They can store stuff.
+          <pre><code>
+                let x = 5;
+                let y = 10;
+                let z = x + y;
+                console.log(z); // Output: 15
+            </code></pre>
+          Thats literally it.
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      document.getElementById("js-test").addEventListener("click", function () {
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        alert(
+          "The functoin has been ran!. \n Hello!. When you click this button, is like a function. A method in a class. Sory! Should have warned you!"
+        );
+      });
+    </script>
+  </body>
+</html>

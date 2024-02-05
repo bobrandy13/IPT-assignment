@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Concepts</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div class="container">
+      <div class="navbar">
+        Software Design and Development
+
+        <div class="links">
+          <a id="syllabus" href="syllabus.html">Syllabus</a>
+          <a id="assignments" href="assignments.html">Assignments</a>
+          <a id="home" href="index.html">Home</a>
+        </div>
+      </div>
+    </div>
+
+    <ul>
+      <li>
+        <h1>What is abstraction?</h1>
+
+        <h2>
+          Abstraction is like playing with a remote control car. You don't know
+          at all how the motor works, or the inner workings. But you just use
+          the remote. That is essence is abstraction.
+        </h2>
+
+        <h3>
+          In code it looks something like this. In Object Oriented code, you
+          have stuff that is private and public. What this means is that private
+          attributes and methods are only visible from within that class.
+        </h3>
+        <h3>
+          For example.The car itself may be able to check whether it has fuel.
+          But you as the user cannot check . This is known as a private method.
+          But a public method that everyone has access to, for example, is to
+          the .drive() method. You can drive, that attriute is public.
+        </h3>
+
+        <pre>
+          <code>
+class Car:
+  def __init__(self, fuel):
+      self.__fuel = fuel <-- this is a private attribute (private variable)
+
+  def __check_fuel(self): <-- this is a private method
+      return self.__fuel
+
+  def drive(self): <-- this is a public attribute. 
+      if (__check_fuel() == 0): <-- however this is ok, because I am acessing it within the class. 
+          print("No fuel")
+      else:
+          print("Vroom!")
+      print("Vroom!")
+
+ferrari = new Car(100) 
+
+ferrari.drive() <-- this is okay
+ferrari.__check_fuel() <-- this is not okay as it is a private attribute. 
+
+          </code>
+        </pre>
+      </li>
+
+      <li>
+        <h1>Instantiation</h1>
+        <h2>
+          Its basically just the creation of a class. For exmaple, if you just
+          made a class. THen you could instantiate it with the following code;
+        </h2>
+
+        <pre>
+          <code>
+car = new Car("ferrari", "red", 100) <- this code is calling upon the class Car that we defined earlier
+          </code>
+        </pre>
+      </li>
+
+      <h1>Inheritance</h1>
+
+      <h3>What is inheritance? Using the car class we just defined earlier.</h3>
+      <h4>
+        What if we wanted to make a porsche? OR a lambo ? or a honda. Would you
+        make a new class for each? But they are all cars. So no. You would
+        "inherit" the class, and then add the unique properties of the cars.
+      </h4>
+
+      <pre>
+        <code>
+class Porsche extends car:
+  def __init__(self, fuel):
+      self.__fuel = fuel
+      self.__brand = "Porsche"
+      self.__color = "Red"
+      self.__speed = 100
+  def drive(self):
+    print("VROOOOOOM ") <-- the porsche is much louder than a normal car. So we can adjust it here. 
+          </code>
+      </pre>
+
+      <h3>
+        The porsche class is the exact same as a car class. But it has a
+        different drive method. This is what inheritance allows us to do.
+      </h3>
+    </ul>
+  </body>
+</html>
